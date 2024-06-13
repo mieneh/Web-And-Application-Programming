@@ -1,0 +1,214 @@
+<!DOCTYPE html >
+<html lang="vi">
+    <head>
+        <meta charset="utf-8" />
+        <style>
+            body {
+                margin: 0 auto;
+                width: 50%;
+                min-width: 960px;
+                background: #e2e2e2;
+            }
+            #left-body {
+                background:#ebf8b0;
+                height:400px; 
+                width:20%;
+            }
+            #right-body {
+                background:#f6f7f6; 
+                height:400px; 
+                width:80%;
+            }
+            .float-left {
+                float:left;
+            }
+            .float-right {
+                float:right;
+            }
+
+            .table1 {   
+                border-collapse: collapse;  
+                background-color:rgb(235, 201, 160);
+                width: 100%;
+            }
+            .td1 {
+                color: rgb(255, 255, 255);
+                background-color: rgb(140, 193, 243);
+                text-align: left;
+                border: 1px solid rgb(31, 31, 84);
+            }
+            .table2 {
+                background-color: rgb(255, 255, 255);
+                border: 1px solid rgb(5, 196, 15);;
+                width: 100%;
+            }
+            .th2 {
+                text-align: center;
+                color: rgb(255, 255, 255);
+                background-color:rgb(5, 196, 15);
+            }
+            .td2 {
+                text-align: right;
+                color: rgb(0, 38, 255);
+                border: 1px solid rgb(5, 196, 15);
+            }
+            .table3 {
+                background-color: rgb(255, 255, 255);
+                border-collapse: collapse;  
+                border: 1px solid rgb(2, 118, 172);
+                width: 100%;
+            }
+            .th3 {
+                border: 1px solid rgb(2, 118, 172);
+                text-align: center;
+            }
+            .td3 {
+                border: 1px solid rgb(2, 118, 172);
+                color: rgb(0, 108, 158);
+            }
+            th {
+                text-align: right;
+            }
+            table { 
+                border-collapse: collapse;    
+                background-color:rgb(235, 201, 160);
+                width: 100%;
+            }
+            .th, .td {
+                border: 1px solid rgb(105, 57, 2);
+                color:rgb(145, 85, 8);
+            }
+            body {
+                margin: 0 auto;
+                background: #ffffff;
+            }
+            #right-body {
+                width: 80%;
+            }
+            .float-right {
+                float:right;
+            }
+            #left-body {
+                width:20%;
+            }
+            .float-left {
+                float: left;
+            }
+        </style>
+        <body>
+            <div><img src = "images\cell5.png" width = "960" height = "200"></div>
+            <div class="float-left" id="left-body">
+                <table>
+                    <tr>
+                        <td class = "td1"><b>Trang chủ</b></td>
+                    </tr>
+                    <tr>
+                        <td class = "td1"><b>Danh sách sinh viên</b></td>
+                    </tr>
+                    <tr>
+                        <td class = "td1"><b>Danh sách MH</b></td>
+                    </tr>
+                    <tr>
+                        <td class = "td1"><b>Xem điểm</b></td>
+                    </tr>
+                    <tr>
+                        <td class = "td1"><b>Danh sách SV</b></td>
+                    </tr>
+                    <tr>
+                        <td class = "td1"><b>Kết quả MH</b></td>
+                    </tr>
+                    <tr>
+                        <td class = "td1"><b>Kết quả học tập</b></td>
+                    </tr>
+                    <tr>
+                        <td class = "td1"><b>Thêm sinh viên</b></td>
+                    </tr>
+                    <tr>
+                        <td class = "td1"><b>Thêm DS SV</b></td>
+                    </tr>
+                    <tr>
+                        <td class = "td1"><b>Thêm kết quả SV</b></td>
+                    </tr>
+                    <tr>
+                        <td class = "td1"><b>                 </b></td>
+                    </tr>
+                    <tr>
+                        <td class = "td1"><b>                 </b></td>
+                    </tr>
+                    <tr>
+                        <td class = "td1"><b>                 </b></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="float-right" id="right-body">
+                <div class="float-left" id="right-body">
+                    <table width = "100%" class = "table2">
+                        <tr>
+                            <th class = "th2" colspan = "2">THÊM SINH VIÊN</th>
+                        </tr>
+                        <tr>
+                            <td class = "td2">Mã sinh viên</td>
+                            <td style="border: 1px solid rgb(5, 196, 15);"><input name ="name" type = "text" placeholder = "" required/></td>
+                        </tr>
+                        <tr>
+                            <td class = "td2">Họ tên</td>
+                            <td style="border: 1px solid rgb(5, 196, 15);"><input name = "cmnd" type = "text" placeholder = "" required/></td>
+                        </tr>
+                        <tr>
+                            <td class = "td2">Ngày sinh</td>
+                            <td style="border: 1px solid rgb(5, 196, 15);"><input name = "cmnd" type = "text" placeholder = "" required/></td>
+                        </tr>
+                        <tr>
+                            <td class = "td2">Hình</td>
+                        <td>
+                            <input type = "file" name = "" required/>
+                        </td>
+                        </tr>
+                        <tr>
+                            <td class = "td2"></td>
+                            <td style = "border: 1px solid rgb(5, 196, 15);">
+                                <button type="Add">Add</button>
+                                <button type="Update">Update</button>
+                                <button type="Update">Save</button>
+                            </td>
+                        </tr>
+                    </table>
+                    <br></br>
+                    <table class = "table3">
+                        <tr style = "color:rgb(255, 255, 255); background-color: rgb(70, 186, 240);">
+                            <th class = "th3" colspan = "5">DANH SÁCH SINH N</td>
+                        </tr>
+                        <tr class = "th3" style = "color:rgb(0, 79, 153); background-color: rgb(186, 234, 253);">
+                            <td >STT</td>
+                            <td>MASV</td>
+                            <td>Họ tên</td>
+                            <td>Ngày sinh</td>
+                            <td>Hình</td>
+                        </tr>
+                        <tr>
+                            <td class = "td3" style = "text-align: center;">1</td>
+                            <td class = "td3">th09</td>
+                            <td class = "td3">Nguyen Lan</td>
+                            <td class = "td3">1/1/1985</td>
+                            <td class = "td3">h1.jpg</td>
+                        </tr>
+                        <tr>
+                            <td class = "td3" style = "text-align: center;">1</td>
+                            <td class = "td3">th89</td>
+                            <td class = "td3">Thanh Nhàn</td>
+                            <td class = "td3">1/8/1985</td>
+                            <td class = "td3">h2.gif</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="float-right" id="left-body">
+
+                </div>
+            </div>
+        </body>
+    </head>
+</html>
+        </div>
+        
+    </body> 
+</html>

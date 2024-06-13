@@ -1,0 +1,195 @@
+.searchFlights {
+  font-family: "Serif";
+  height: auto;
+  background: white;
+  margin-bottom: 2em;
+}
+.searchFlights .col-sm-2, .searchFlights .col-sm-1, .searchFlights .col-sm-3 {
+  border-right: 1px solid #f8b600;
+  position: relative;
+  top: +0.25em;
+  min-height: 5.4em !important;
+}
+.searchFlights .col-sm-2:last-child, .searchFlights .col-sm-1:last-child, .searchFlights .col-sm-3:last-child {
+  border-right: none;
+}
+.searchFlights .heading {
+  font-weight: 300;
+  color: #000000;
+  text-align: center;
+  margin: 2em 0 0 0;
+}
+.searchFlights .query {
+  font-size: 2.5em;
+  font-weight: 300;
+  color: #000000;
+  text-align: center;
+  margin: 0.25em 0 1.25em 0;
+}
+.searchFlights .noOfFlights {
+  font-size: 1.5em;
+  font-weight: 500;
+  color: #f8b600;
+  text-align: center;
+  margin: -1.8em 0 2.5em 0;
+}
+.searchFlights .noFlights {
+  box-sizing: border-box;
+  background: #f5f5ff;
+  height: auto;
+  font-size: 1.5em;
+  font-weight: 300;
+  color: #f8b600;
+  text-align: center;
+  margin: 1.5em 3em 1.5em 3em;
+  border: 2px solid #f8b600;
+  border-radius: 8px;
+  padding: 2em;
+}
+.searchFlights .bg {
+  box-sizing: border-box;
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23b6b6b6' fill-opacity='0.6' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  height: auto;
+  min-height: 10em;
+  margin: 3em;
+  border: 2px solid #c8c8c8;
+  border-radius: 8px;
+  padding: 0.35em;
+}
+.searchFlights .listItem {
+  box-sizing: border-box;
+  background: #f5f5ff;
+  height: auto;
+  min-height: 7em;
+  vertical-align: middle;
+  margin: 1.5em 3em;
+  border: 2px solid #f8b600;
+  border-radius: 8px;
+  padding: 0.35em 0 0.75em 0;
+}
+.searchFlights .listItem .headings {
+  color: #f8b600;
+  font-size: 1.2em;
+  margin-top: 0.75em;
+  margin-bottom: 0.5em;
+}
+.searchFlights .listItemMenuContainer {
+  box-sizing: border-box;
+  background: #f5f5ff;
+  height: auto;
+  min-height: 3.5em;
+  vertical-align: middle;
+  margin: 1.5em 3em -4.5em 3em;
+  border: 2px solid #f8b600;
+  border-radius: 8px;
+  padding: 0 0 0.15em 0;
+}
+.searchFlights .listItemMenuContainer .headings {
+  color: #000000;
+  font-size: 1.5em;
+  margin-top: 0.05em;
+  margin-bottom: 0.05em;
+}
+.searchFlights .listItemMenuContainer .col-sm-2, .searchFlights .listItemMenuContainer .col-sm-1, .searchFlights .listItemMenuContainer .col-sm-3 {
+  border-right: 1.0px solid #f8b600;
+  position: relative;
+  top: +0.25em;
+  min-height: 2em !important;
+}
+.searchFlights .listItemMenuContainer .col-sm-2:last-child, .searchFlights .listItemMenuContainer .col-sm-1:last-child, .searchFlights .listItemMenuContainer .col-sm-3:last-child {
+  border-right: none;
+}
+.searchFlights .operatorLogo img {
+  display: inline-block;
+  height: 4em;
+  width: 6em;
+  border-radius: 5px;
+  position: relative;
+  top: +0.8em;
+  border: 1px solid #f8b600;
+}
+.searchFlights .listItem .departs, .searchFlights .listItem .arrives, .searchFlights .listItem .fare, .searchFlights .listItem .type {
+  color: #222222;
+  font-size: 1.5em;
+  margin: 0.2em 0 0 0;
+  text-overflow: ellipsis;
+}
+.searchFlights .listItem .flightOperator {
+  color: #222222;
+  font-size: 1.5em;
+  margin: 0.2em 0 0 0;
+  text-overflow: ellipsis;
+  position: relative;
+}
+.searchFlights .listItem .fare::after {
+  content: " VND";
+  font-weight: 400;
+  position: relative;
+  top: +0.em;
+  left: 0;
+}
+.searchFlights .listItem .availabilityGreen {
+  color: #1dc707;
+  font-size: 1.65em;
+  position: relative;
+  top: -0.03em;
+  margin: 0.25em;
+}
+.searchFlights .listItem .availabilityRed {
+  color: red;
+  font-size: 1.65em;
+  position: relative;
+  top: -0.03em;
+  margin: 0.25em;
+}
+.searchFlights .listItem .departsSubscript, .searchFlights .listItem .arrivesSubscript, .searchFlights .listItem .fareSubscript, .searchFlights .listItem .typeSubscript {
+  color: #f8b600;
+  font-size: 1.2em;
+  margin: 0.1em;
+}
+.searchFlights .listItem .flightNoSubscript {
+  color: #f8b600;
+  font-size: 1.2em;
+  margin: 0.1em;
+  position: relative;
+  top: +0.15em;
+}
+.searchFlights .listItem .unavailabilitySubscript {
+  color: #f8b600;
+  font-size: 1.25em;
+  margin: 0.1em;
+  position: relative;
+  top: -0.15em;
+}
+.searchFlights .listItem .availabilityBookingButton {
+  color: #f8b600;
+  font-size: 1.25em;
+  margin: -0.5em;
+  width: 75%;
+  border: 1px solid #f8b600;
+  border-radius: 5px;
+  background: transparent;
+  transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1);
+  cursor: pointer;
+}
+.searchFlights .listItem .availabilityBookingButton:hover {
+  color: white;
+  font-size: 1.25em;
+  border: 1px solid #f8b600;
+  border-radius: 5px;
+  background: #f8b600;
+}
+.searchFlights .listItem .departsSubscript::before, .searchFlights .listItem .arrivesSubscript::before, .searchFlights .listItem .fareSubscript::before, .searchFlights .listItem .flightNoSubscript::before, .searchFlights .listItem .typeSubscript::before {
+  position: relative;
+  left: +0.25em !important;
+}
+.searchFlights .listItem .departsSubscript::after, .searchFlights .listItem .arrivesSubscript::after, .searchFlights .listItem .fareSubscript::after, .searchFlights .listItem .flightNoSubscript::after, .searchFlights .listItem .typeSubscript::after {
+  position: relative;
+  left: -0.25em !important;
+}
+.spacerLarge {
+  margin: 2.5em;
+  visibility: hidden;
+}

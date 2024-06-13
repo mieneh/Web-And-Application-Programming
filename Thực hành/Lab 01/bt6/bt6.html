@@ -1,0 +1,141 @@
+<!DOCTYPE html >
+<html lang="vi">
+    <head>
+        <meta charset="utf-8" />
+        <style>
+            body {
+                margin: 0 auto;
+                width: 50%;
+                max-width: max;
+                background: #ffffff;
+            }
+            #right-body {
+                width: 70%;
+            }
+            .float-right {
+                float:right;
+            }
+            #left-body {
+                width:30%;
+            }
+            .float-left {
+                float: left;
+            }
+            table {
+                border-collapse: collapse;
+            }
+            .td1 {
+                color: blue;
+                text-align: left;
+                border: 1px solid rgb(31, 31, 84);
+            }
+            .table {
+                margin: 16px auto;
+                padding: 10px 5px;
+            }
+            .td2 {
+                color: rgb(34, 88, 150);
+                text-align: right;
+            }
+            th
+            {
+                text-align: center;
+                color:red;
+            }
+            p {
+                text-align: center;
+            }
+        </style>
+        <body>
+            <img src = "images\car3.jpg">
+            <div class = "float-left" id="left-body">
+                <table>
+                    <tr>
+                        <td class = "td1"><b>Trang chủ</b></td>
+                    </tr>
+                    <tr>
+                        <td class = "td1"><b>Giới thiệu sản phẩm</b></td>
+                    </tr>
+                    <tr>
+                        <td class = "td1"><b>Các đại lý</b></td>
+                    </tr>
+                    <tr>
+                        <td class = "td1"><b>Dịch vụ</b></td>
+                    </tr>
+                    <tr>
+                        <td class = "td1"><b>Hợp tác</b></td>
+                    </tr>
+                    <tr>
+                        <td class = "td1"><b>Góp ý</b></td>
+                    </tr>
+                    <tr>
+                        <td class = "td1"><b>Quảng cáo</b></td>
+                    </tr>
+                </table>
+            </div>
+            <div class = "float-right" id="right-body">
+            <table class = "table">
+                <tr>
+                    <th colspan = "2">HỘP THƯ GÓP Ý</th>
+                </tr>
+                <tr>
+                    <td class = "td2">Họ tên</td>
+                    <td> <input name="name" type="text" placeholder="" required/></td>
+                </tr>
+                <tr>
+                    <td class = "td2">Hộ khẩu</td>
+                    <td>
+                        <select name="country">
+                            <option value = "Tp Hồ Chí Minh">
+                                Tp Hồ Chí Minh
+                            </option>
+                            <option value = "Đồng Nai">
+                                Đồng Nai
+                            </option>
+                            <option value = "Long An">
+                                Long An
+                            </option>
+                        </select>
+                    </td>
+                <tr>
+                    <td class = "td2">Góp ý về lĩnh vực</td>
+                    <td style =  "color: rgb(34, 88, 150);">
+                        <input type="checkbox" name="Giới tính" id="Dịch vụ" value="Dịch vụ"/>
+                        <label for="Dịch vụ">Dịch vụ</label>
+                        <input type="checkbox" name="Giới tính" id="Sản phẩm" value="Sản phẩm"/>
+                        <label for="Sản phẩm">Sản phẩm</label>
+                        <input type="checkbox" name="Giới tính" id="Loại khác" value="Loại khác"/>
+                        <label for="Loại khác">Loại khác</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class = "td2">Ngôn ngữ</td>
+                    <td style = "color: rgb(34, 88, 150)">
+                        <input type="radio" name="Ngôn ngữ" id="Anh" value="Anh"/>
+                        <label for="Anh">Anh</label>
+                        <input type="radio" name="Ngôn ngữ" id="Việt" value="Việt"/>
+                        <label for="Việt">Việt</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class = "td2">Nội dung</td>
+                    <td>
+                        <textarea name = "noidung" wrap = "off/physical/virtual"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button type="Gui">
+                            Gui
+                        </button>
+                        <button type="Xoa">
+                            Xoa
+                        </button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        </body>
+    </head>
+</html>

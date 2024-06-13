@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script>
+            function delete_item(btn){
+                let tr=$(btn).closest('tr')
+                let tds=tr.find('td')
+                let name=tds[0].innerText+' '+tds[1].innerText
+                if(!confirm(`Bạn có chắc chắn mún xóa [${name}] không?`))
+                    return 
+                tr.remove()
+            }
+            $(function(){
+                $('#btnAdd').click(evt=>{
+                    let fn=$('#firstname').val().trim()
+                    let ln=$('#lastname').val().trim()
+                    let email=$('#email').val().trim()
+                    let tr=`<tr>
+                        <td>${fn}</td>
+                        <td>${ln}</td>
+                        <td>${email}</td>
+                        <td><button onclick="delete_item(this)">Delete</button></td>
+                        </tr>`
+                    $("#employee").append(tr)
+                }) 
+            })
+        </script>
+    </head>
+    <body>
+
+        <style>
+            .container{
+                max-width: 600px;
+            }
+        </style>
+
+        <div class="container">
+            <h2>Add student</h2>
+            <form action="/action_page.php">
+                <div class="form-group">
+                    <label for="firstname">First name:</label>
+                    <input type="text" class="form-control" id="firstname" placeholder="Enter first name" name="firstname">
+                </div>
+                <div class="form-group">
+                    <label for="lastname">Last name:</label>
+                    <input type="text" class="form-control" id="lastname" placeholder="Enter last name" name="lastname">
+                </div>
+                <div class="form-group ">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                </div>
+                <button type="button" class="btn btn-default" id="btnAdd">Add</button>
+            </form>
+
+            <br><table class="table table-hover">
+                <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Email</th>
+                    <th>Delete</th>
+                </tr>
+                </thead>
+                <tbody id="employee">
+                    <tr>
+                        <td>John</td>
+                        <td>Doe</td>
+                        <td>john@example.com</td>
+                        <td><button onclick="delete_item(this)">Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>Mary</td>
+                        <td>Moe</td>
+                        <td>mary@example.com</td>
+                        <td><button onclick="delete_item(this)">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

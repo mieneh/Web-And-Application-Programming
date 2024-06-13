@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script>
+            $(function(){
+                $('#message').on('input', function (event) {
+                    $('#showMsg').css('color', $('#color').val());
+                    $('#showMsg').text($(this).val());
+                });
+
+                $('#color').on('change', function (event) {
+                    $('#showMsg').css('color', $(this).val());
+                });
+
+                $('#bold').on('change', function (event) {
+                    console.log($(this).is(':checked'));
+                    if ($(this).is(':checked')) {
+                        $('#showMsg').css('font-weight', 'bold');
+                    } else {
+                        $('#showMsg').css('font-weight', 'normal');
+                    }
+                });
+
+                $('#italic').on('change', function (event) {
+                    $('#showMsg').css('font-style', $(this).is(':checked') ? 'italic' : 'normal');
+                });
+
+                $('#underline').on('change', function (event) {
+                    $('#showMsg').css('text-decoration', $(this).is(':checked') ? 'underline' : 'none');
+                });
+                
+                $('#button').click( () => {
+                    alert(`${$('#showMsg').text()}`)
+                } )
+            })
+        </script>
+    </head>
+    <body>
+        <style>
+            .container{
+                max-width: 600px;
+                margin: auto;
+            }
+            checkbox{
+                margin-right: 10px;
+            }
+        </style>
+
+        <div class="container">
+            <br>
+            <br>
+            <p id="showMsg">Message will be here</p><br><br>
+
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <input type="text" class="form-control" id="message" placeholder="Enter new message" name="message">
+            </div>
+
+            <div class="form-group">
+                <label for="color">Color:</label>
+                <select name="color" id="color">
+                    <option>Black</option>
+                    <option>Red</option>
+                    <option>Green</option>
+                    <option>Blue</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="bold">Bold:</label>
+                <input type="checkbox" name="bold" id="bold">
+                <label for="italic">Italic:</label>
+                <input type="checkbox" name="italic" id="italic">
+                <label for="underline">Underline:</label>
+                <input type="checkbox" name="underline" id="underline">
+            </div>
+
+            <button id="button" type="button">Show message</button>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                margin: 0 auto;
+                width: 50%;
+                min-width: 960px;
+                background: #e2e2e2;
+            }
+            #left-body {
+                background:#dad8d8; 
+                height:400px; 
+                width:20%;
+            }
+            #right-body {
+                background:#f6f7f6; 
+                height:400px; 
+                width:80%;
+            }
+            .float-left {
+                float:left;
+            }
+            .float-right {
+                float:right;
+            }
+
+            .table1 {   
+                border-collapse: collapse;  
+                background-color:rgb(235, 201, 160);
+                width: 100%;
+            }
+            .td1 {
+                border: 1px solid rgb(105, 57, 2);
+                color:rgb(145, 85, 8);
+            }
+            .table2 {
+                border: 1px solid rgb(255, 255, 255);
+                width: 100%;
+            }
+            .th2 {
+                text-align: center;
+                color: red;
+                background-color:rgb(247, 188, 140);
+            }
+            .td2 {
+                text-align: right;
+                color: rgb(50, 72, 197);
+                background-color:rgb(233, 233, 233);
+            }
+            .table3 {
+                border-collapse: collapse;  
+                border: 1px solid rgb(158, 129, 0);
+                width: 100%;
+            }
+            .th3 {
+                border: 1px solid rgb(158, 129, 0);
+                text-align: center;
+                color: rgb(158, 129, 0);
+                background-color:rgb(212, 212, 212);
+            }
+            .td3 {
+                border: 1px solid rgb(158, 129, 0);
+                color: rgb(0, 38, 255);
+                
+            }
+        </style>
+    </head>
+    <body>
+        <div><img src="images\car3.jpg"  width = "960" height = "100"></div>
+        <div class="float-left" id="left-body">
+            <table class="table1">
+                <tr>
+                    <td class="td1">Quảng cáo</td>
+                </tr>
+                <tr>
+                    <td class="td1">Giới thiệu sản phẩm</td>
+                </tr>
+                <tr>
+                    <td class="td1">Hợp tác</td>
+                </tr>
+                <tr>
+                    <td class="td1">Các đại lý</td>
+                </tr>
+                <tr>
+                    <td class="td1">Tuyển dụng</td>
+                </tr>
+                <tr>
+                    <td class="td1">Liên hệ</td>
+                </tr>
+                <tr>
+                    <td class="td1">Đặt hàng</td>
+                </tr>
+            </table>
+        </div>
+        <div class = "float-right" id="right-body">
+            <table width="100%" class = "table2">
+                <tr>
+                    <th class = "th2" colspan = "4">Đăng ký giấy phép lái xe ô tô</th>
+                </tr>
+                <tr>
+                    <td class = "td2">Họ tên</td>
+                    <td><input name ="name" type = "text" placeholder = "" required/></td>
+                </tr>
+                <tr>
+                    <td class = "td2">Số CMND</td>
+                    <td><input name = "cmnd" type = "text" placeholder = "" required/></td>
+                </tr>
+                <tr>
+                    <td class = "td2">Hộ khẩu</td>
+                    <td>
+                        <select name="country">
+                            <option value="Tp Hồ Chí Minh">Tp Hồ Chí Minh</option>
+                            <option value="Đồng Nai">Đồng Nai</option>
+                            <option value="Long An">Long An</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class = "td2">Hình xe</td>
+                    <td>
+                        <select name="xe">
+                            <option value="Toyota">Yoyota</option>
+                            <option value="Vario">Vario</option>
+                            <option value="Khác">Khác</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class = "td2"></td>
+                    <td style="background-color:rgb(233, 233, 233)">
+                        <button type="Them">Them</button>
+                        <button type="Xoa">Xoa</button>
+                    </td>
+                </tr>
+            </table>
+            <br></br>
+            <table class = "table3">
+                <tr>
+                    <th class = "th3" colspan = "3">DANH SÁCH ĐĂNG KÝ XE</td>
+                </tr>
+                <tr>
+                    <td class = "th3">STT</td>
+                    <td class = "th3">HỌ TÊN</td>
+                    <td class = "th3">XEM CHI TIẾT</td>
+                </tr>
+                <tr>
+                    <td class = "td3" style = "text-align: center;">1</td>
+                    <td class = "td3">Nguyễn Thị Thanh Thảo</td>
+                    <td class = "td3">chi tiết</td>
+                </tr>
+            </table>
+        </div>
+    </body> 
+</html>

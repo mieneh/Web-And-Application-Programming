@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <style>
+            body {
+                text-align: center;
+                min-width: 960px;
+            }
+            #right-body {
+                margin: 0 auto;
+                background:#f7f7f7; 
+                height:30%;
+                text-align: left;
+                width: 720px;
+            }
+            table {
+                margin: 16px auto;
+                padding: 10px 5px;
+            }
+            th {
+                color: red;
+                text-align: center;
+            }
+            .td {
+                color: rgb(34, 88, 150);
+                text-align: right;
+            }
+            select {
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id = "right-body">
+        <table>
+            <tr>
+                <th colspan = "4">ĐĂNG KÝ THI TIẾNG HÁT TRUYỀN HÌNH</th>
+            </tr>
+            <tr>
+                <td class = "td">Họ tên</td>
+                <td>
+                    <input name="name" type="text" placeholder=""required
+                    />
+                </td>
+            </tr>
+            <tr>
+                <td class = "td">Hộ khẩu</td>
+                <td>
+                    <select name="country">
+                        <option value="Tp Hồ Chí Minh">
+                            Tp Hồ Chí Minh
+                        </option>
+                        <option value="Đồng Nai">
+                            Đồng Nai
+                        </option>
+                        <option value="Long An">
+                            Long An
+                        </option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class = "td">Giới tính</td>
+                <td style = "color: rgb(34, 88, 150);">
+                    <input type = "radio" name = "Giới tính" id="Nam" value="Nam"/>
+                    <label for = "Nam">Nam</label>
+                    <input type = "radio" name="Giới tính" id="Nữ" value="Nữ"/>
+                    <label for = "Nữ">Nữ</label>
+                </td>
+            </tr>
+            <tr>
+                <td class = "td">Hình</td>
+                <td>
+                    <input type = "file" name = "" required/>
+                </td>
+            </tr>
+            <tr>
+                <td class = "td">Danh sách bài hát đăng ký</td>
+                <td>
+                    <textarea name = "danhssach" wrap = "off/physical/virtual"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button type="Dang ky">
+                        Dang ky
+                    </button>
+                    <button type="Xoa">
+                        Xoa
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </body>
+</html>

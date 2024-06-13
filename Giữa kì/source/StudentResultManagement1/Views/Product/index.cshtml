@@ -1,0 +1,98 @@
+﻿@model IEnumerable<StudentResultManagement1.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 id="page-title">Danh sách sản phẩm</h2>
+
+@if (TempData["InfoMessage"] != null)
+{
+    <div id="alert-div" class="alert alert-info">
+        <Strong>Infomation: </Strong> @TempData["InfoMessage"]
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+}
+else if (TempData["SuccessMessage"] != null)
+{
+    <div id="alert-div" class="alert alert-success">
+        <Strong>Success: </Strong> @TempData["SuccessMessage"]
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+}
+else if (TempData["ErrorMessage"] != null)
+{
+    <div id="alert-div" class="alert alert-danger">
+        <Strong>Error: </Strong> @TempData["ErrorMessage"]
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+}
+
+<p>
+    <a href="/Product/Create" class="btn btn-cr">Create New Product</a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.productName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.qty)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.remarks)
+        </th>
+        <th>Action</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.productName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.qty)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.remarks)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.productID }, new { @class = "btn btn-primary" }) &nbsp;&nbsp;&nbsp;
+
+                @Html.ActionLink("Details", "Details", new { id = item.productID }, new { @class = "btn btn-secondary" })&nbsp;&nbsp;&nbsp;
+
+                @Html.ActionLink("Delete", "Delete", new { id = item.productID }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
+
+</table>
+<script>
+    $(document).ready(function () {
+        $('#alert-div .close').click(function () {
+            $('#alert-div').remove();
+        });
+    });
+</script>
+<script>
+    window.setTimeout(function () {
+        $(".alert").fadeTo(500, 0).slideUp(500, function () {
+            $(this).remove();
+        });
+    }, 4000);
+</script>
